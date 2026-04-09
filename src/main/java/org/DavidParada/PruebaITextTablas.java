@@ -20,7 +20,7 @@ public class PruebaITextTablas {
 
             // CREAR PDF
 
-            PdfWriter writer = new PdfWriter("ejemplo_tablas.pdf");
+            PdfWriter writer = new PdfWriter("src/resources/pdf/ejemplo_tablas.pdf");
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf, PageSize.A4);
 
@@ -153,14 +153,13 @@ public class PruebaITextTablas {
             document.add(new Paragraph("Cabecera"));
             document.add(table7.setMarginBottom(20));
 
-
     // TABLA CON IMAGEN
 
             Table table8 = new Table(2);
 
             Image img = new Image(
                     com.itextpdf.io.image.ImageDataFactory.create(
-                            "src/main/resources/imagenes/logo.png"
+                            "src/resources/imagen/logo.png"
                     )
             ).scaleToFit(50, 50);
 
@@ -169,7 +168,6 @@ public class PruebaITextTablas {
 
             document.add(new Paragraph("Tabla con imagen"));
             document.add(table8.setMarginBottom(20));
-
 
     // COLSPAN (2 columnas)
 
@@ -202,7 +200,6 @@ public class PruebaITextTablas {
 
             document.add(new Paragraph("Rowspan (2 filas)"));
             document.add(tableRowspan.setMarginBottom(20));
-
 
     // COMBINACIÓN COMPLETA
 

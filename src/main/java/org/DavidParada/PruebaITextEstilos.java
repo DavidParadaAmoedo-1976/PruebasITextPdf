@@ -13,7 +13,7 @@ public class PruebaITextEstilos {
     public static void main(String[] args) {
         try {
 
-            PdfWriter writer = new PdfWriter("ejemplo_estilos.pdf");
+            PdfWriter writer = new PdfWriter("src/resources/pdf/ejemplo_estilos.pdf");
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 

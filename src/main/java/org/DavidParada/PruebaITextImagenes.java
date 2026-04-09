@@ -20,12 +20,12 @@ public class PruebaITextImagenes {
 
             // CREAR PDF
 
-            PdfWriter writer = new PdfWriter("ejemplo_imagenes.pdf");
+            PdfWriter writer = new PdfWriter("src/resources/pdf/ejemplo_imagenes.pdf");
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf, PageSize.A4);
 
             // Ruta de la imagen
-            String rutaImagen = "src/main/resources/imagenes/logo.png";
+            String rutaImagen = "src/resources/imagen/logo.png";
 
             // CARGAR IMAGEN
             ImageData imageData = ImageDataFactory.create(rutaImagen);
