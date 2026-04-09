@@ -2,11 +2,14 @@ package org.DavidParada;
 
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.kernel.colors.Color;
 import com.itextpdf.kernel.colors.ColorConstants;
+import com.itextpdf.kernel.colors.DeviceRgb;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
+import com.itextpdf.layout.borders.SolidBorder;
 import com.itextpdf.layout.element.*;
 import com.itextpdf.layout.properties.HorizontalAlignment;
 
@@ -115,7 +118,8 @@ public class PruebaITextImagenes {
 
             Image imgBorder = new Image(imageData);
             imgBorder.scaleToFit(150, 150);
-            imgBorder.setBorder(new com.itextpdf.layout.borders.SolidBorder(ColorConstants.BLACK, 2));
+            DeviceRgb borderColor = new DeviceRgb(85, 150, 240);
+            imgBorder.setBorder(new SolidBorder(borderColor, 2));
 
             document.add(new Paragraph("Imagen con borde:"));
             document.add(imgBorder);
